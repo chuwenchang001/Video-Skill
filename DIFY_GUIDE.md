@@ -248,4 +248,4 @@ GET {{SUBTITLE_API_BASE}}/api/subtitle/task/{task_id}
 
 ---
 
-各步更细的字段定义与规则见 [`README.md`](README.md) 与 `steps/1~4.md`。
+各阶段更细的字段定义与规则见技能定义 [`SKILL.md`](SKILL.md)。
