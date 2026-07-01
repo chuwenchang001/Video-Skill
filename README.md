@@ -58,6 +58,8 @@ Video-Skill/
     └── few-shot-samples.json
 ```
 
+> 📘 **完整的逐节点搭建操作手册见 [DIFY_GUIDE.md](DIFY_GUIDE.md)**(前置准备 / Start 表单 / 4 步节点配置 / KB 注入 / 冒烟测试 / 常见坑)。下面是速览。
+
 ## 在 Dify 里怎么搭(节点映射)
 
 整条 pipeline 建议做成一个 **Dify 工作流(Workflow)**,4 个 Skill 依次对应下列节点:
