@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "required": [
+    "burned",
+    "language"
+  ],
+  "properties": {
+    "burned": {
+      "type": "boolean",
+      "description": "是否成功烧入字幕"
+    },
+    "language": {
+      "type": "string"
+    },
+    "taskId": {
+      "type": "string",
+      "description": "烧字任务 id(成功时)"
+    },
+    "sourceVideoUrl": {
+      "type": "string",
+      "description": "无字幕原片 URL"
+    },
+    "subtitledUrl": {
+      "type": "string",
+      "description": "带字幕成片 URL(成功且持久化后)"
+    },
+    "persisted": {
+      "type": "boolean"
+    },
+    "error": {
+      "type": "string",
+      "description": "失败原因(降级时)"
+    }
+  }
+}

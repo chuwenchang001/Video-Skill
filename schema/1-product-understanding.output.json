@@ -1,0 +1,268 @@
+{
+  "type": "object",
+  "required": [
+    "classification",
+    "productSummary",
+    "targetAudience",
+    "sellingPoints",
+    "painPointsSolved",
+    "platformStrategy",
+    "videoTypeStrategy",
+    "creativeDirections",
+    "recommendedDirection"
+  ],
+  "properties": {
+    "classification": {
+      "type": "object",
+      "required": [
+        "categoryId",
+        "categoryLabel",
+        "confidence",
+        "reasoning"
+      ],
+      "properties": {
+        "categoryId": {
+          "type": "string",
+          "enum": [
+            "beauty_personal_care",
+            "food_beverage",
+            "digital_3c",
+            "home_appliance",
+            "apparel_accessories",
+            "maternal_baby",
+            "sports_outdoor",
+            "health_wellness",
+            "pet",
+            "ai_saas",
+            "software_tools",
+            "games",
+            "education_training",
+            "knowledge_content",
+            "home_furniture",
+            "kitchenware",
+            "jewelry_watch",
+            "luxury",
+            "automotive",
+            "travel_hospitality",
+            "dining_local",
+            "finance_insurance",
+            "home_service",
+            "medical_aesthetics",
+            "supplements",
+            "toys_collectibles",
+            "stationery_office",
+            "daily_cleaning",
+            "fresh_grocery",
+            "other"
+          ],
+          "description": "归入的内置类目 id"
+        },
+        "categoryLabel": {
+          "type": "string",
+          "description": "类目中文名"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "归类置信度"
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "归类依据"
+        }
+      }
+    },
+    "productSummary": {
+      "type": "string",
+      "description": "一句话概括商品与核心价值"
+    },
+    "targetAudience": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 4,
+      "description": "目标人群画像"
+    },
+    "sellingPoints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3,
+      "maxItems": 6,
+      "description": "核心卖点"
+    },
+    "painPointsSolved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "解决的痛点"
+    },
+    "platformStrategy": {
+      "type": "object",
+      "required": [
+        "platform",
+        "appliedNorms",
+        "hookGuidance"
+      ],
+      "properties": {
+        "platform": {
+          "type": "string",
+          "description": "回显输入的平台 id"
+        },
+        "appliedNorms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "应用到的平台内容惯例"
+        },
+        "hookGuidance": {
+          "type": "string",
+          "description": "针对该平台的开场/钩子建议"
+        }
+      }
+    },
+    "videoTypeStrategy": {
+      "type": "object",
+      "required": [
+        "videoType",
+        "formatNotes"
+      ],
+      "properties": {
+        "videoType": {
+          "type": "string",
+          "description": "回显输入的视频类型 id"
+        },
+        "formatNotes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "该形态的执行要点"
+        }
+      }
+    },
+    "creativeDirections": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "description": "2–4 个候选方向,按 totalScore 从高到低排序(首项即最佳)",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "angle",
+          "rationale",
+          "scores",
+          "totalScore",
+          "recommended"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "创意方向名称"
+          },
+          "angle": {
+            "type": "string",
+            "description": "切入角度/核心洞察"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "为什么适合该商品×平台×视频类型"
+          },
+          "scores": {
+            "type": "object",
+            "required": [
+              "platformFit",
+              "audienceResonance",
+              "productFit",
+              "feasibility",
+              "differentiation"
+            ],
+            "properties": {
+              "platformFit": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5,
+                "description": "平台契合度"
+              },
+              "audienceResonance": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5,
+                "description": "人群共鸣"
+              },
+              "productFit": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5,
+                "description": "卖点承载"
+              },
+              "feasibility": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5,
+                "description": "制作可执行性"
+              },
+              "differentiation": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5,
+                "description": "差异化/记忆点"
+              }
+            }
+          },
+          "totalScore": {
+            "type": "integer",
+            "minimum": 5,
+            "maximum": 25,
+            "description": "五维之和"
+          },
+          "recommended": {
+            "type": "boolean",
+            "description": "是否为最终决策方向(有且仅一个 true)"
+          }
+        }
+      }
+    },
+    "recommendedDirection": {
+      "type": "object",
+      "required": [
+        "title",
+        "angle",
+        "whyBest",
+        "executionHints",
+        "expectedTotalScore"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "angle": {
+          "type": "string"
+        },
+        "whyBest": {
+          "type": "string",
+          "description": "为何最优,需引用平台/类目/视频类型决策依据"
+        },
+        "executionHints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "落地执行提示,供下游 Creative 展开"
+        },
+        "expectedTotalScore": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 25
+        }
+      }
+    }
+  }
+}

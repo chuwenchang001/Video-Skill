@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "required": [
+    "CREATIVE"
+  ],
+  "properties": {
+    "CREATIVE": {
+      "type": "object",
+      "description": "Skill2 分镜脚本输出"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "zh",
+        "en",
+        "id",
+        "th",
+        "vi",
+        "ja",
+        "ko",
+        "ms"
+      ],
+      "default": "zh",
+      "description": "成片台词/配音语种 id"
+    },
+    "duration": {
+      "type": "number",
+      "enum": [
+        15,
+        30
+      ],
+      "default": 15,
+      "description": "视频总时长(秒),仅 15 或 30"
+    },
+    "aspectRatio": {
+      "type": "string",
+      "enum": [
+        "9:16",
+        "16:9",
+        "1:1",
+        "4:3",
+        "3:4",
+        "21:9"
+      ],
+      "default": "9:16",
+      "description": "画幅"
+    }
+  }
+}

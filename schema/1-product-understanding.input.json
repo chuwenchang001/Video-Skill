@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "required": [
+    "product"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "product": {
+      "type": "string",
+      "description": "商品名称"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "卖点/功能点列表",
+      "default": []
+    },
+    "price": {
+      "type": "string",
+      "description": "价格(可选)"
+    },
+    "scenario": {
+      "type": "string",
+      "description": "使用场景(可选)"
+    },
+    "brandTone": {
+      "type": "string",
+      "description": "品牌调性/语气(可选)"
+    },
+    "productImageUrl": {
+      "type": "string",
+      "description": "产品图片公网 URL(可选,用于多模态理解与产品一致性)"
+    },
+    "productImageUrls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "多张产品图公网 URL(可选)"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "tiktok",
+        "instagram",
+        "facebook",
+        "shopee",
+        "lazada",
+        "youtube",
+        "amazon",
+        "douyin",
+        "kuaishou",
+        "shipinhao",
+        "xiaohongshu"
+      ],
+      "default": "douyin",
+      "description": "投放平台 id"
+    },
+    "videoType": {
+      "type": "string",
+      "enum": [
+        "spoken_grass",
+        "narrative_short",
+        "funny_drama",
+        "product_review",
+        "unboxing",
+        "comparison_experiment",
+        "kol_recommend"
+      ],
+      "default": "spoken_grass",
+      "description": "视频类型 id"
+    }
+  }
+}

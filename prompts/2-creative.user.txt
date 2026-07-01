@@ -1,0 +1,30 @@
+承接以下上游决策,产出一支广告短视频的分镜脚本。
+
+== 上游决策(Skill1 输出,必须严格承接,不要另选方向)==
+{{PRODUCT_UNDERSTANDING_json}}
+
+== 投放平台约束 ==
+平台:{{platform_label}}
+时长建议:{{platform_durationHint}}
+内容惯例:{{platform_contentNorms}}
+
+== 视频类型 ==
+{{videoType_label}}:{{videoType_strengths}}{{funny_drama_directive_if_applicable}}
+
+== 目标语种(强约束)==
+{{language_label}}(片中台词/口播/配音与字幕的语言:{{language_speak}})
+
+== 视频时长(用户指定,强约束)==
+{{duration}} 秒
+{{product_image_block}}
+要求:
+1. 直接采用上游 recommendedDirection 作为本片方向,标题/钩子/CTA 都围绕它展开,不要另选其它方向;
+2. 视频总时长 durationSec 必须严格等于 {{duration}} 秒(用户指定,不得自行更改);{{duration_guide}}在 durationRationale 说明如何在该时长内铺排节奏;
+3. 把总时长拆成 3-8 个分镜,各镜 durationSec 之和必须等于 {{duration}};
+4. 用上游 platformStrategy.hookGuidance 设计前 3 秒 hook;应用 videoTypeStrategy.formatNotes 与 recommendedDirection.executionHints;
+5. 每个分镜的 visual 要具体到可直接作为视频生成模型提示词;并标注运镜/旁白/音乐;成片不要任何屏幕字幕/花字;
+6. 遵守上游归类的合规红线,不得出现夸大或违规表述;
+7. 产品展示镜:productShot=true 且 visual 内含 @<产品图片URL>(见上"产品参考图");无参考图时全部 productShot=false;
+8. 语言:每个分镜的 voiceover(台词/旁白/口播)必须用{{language_speak}}撰写;visual 等其它字段仍用中文。
+
+只返回一个 JSON 对象,不要包含任何额外说明文字。

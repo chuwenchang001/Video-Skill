@@ -1,0 +1,9 @@
+# 真实密钥不进仓库(只保留 .env.example)
+.env
+.env.local
+.env*.local
+
+# 系统/编辑器杂物
+.DS_Store
+*.log
+node_modules/

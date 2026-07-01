@@ -1,0 +1,118 @@
+{
+  "type": "object",
+  "required": [
+    "chosenDirection",
+    "title",
+    "durationSec",
+    "durationRationale",
+    "aspectRatio",
+    "hook",
+    "scenes",
+    "cta",
+    "taglines"
+  ],
+  "properties": {
+    "chosenDirection": {
+      "type": "string",
+      "description": "承接的 Skill1 recommendedDirection,并说明如何落地"
+    },
+    "title": {
+      "type": "string",
+      "description": "视频标题"
+    },
+    "durationSec": {
+      "type": "number",
+      "description": "视频总时长(秒);最终由用户所选 15/30 覆盖"
+    },
+    "durationRationale": {
+      "type": "string",
+      "description": "时长决策依据(引用平台时长建议与视频类型节奏)"
+    },
+    "aspectRatio": {
+      "type": "string",
+      "description": "画幅,如 9:16 / 16:9 / 1:1"
+    },
+    "hook": {
+      "type": "string",
+      "description": "前 3 秒钩子,承接平台开场策略"
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "index",
+          "durationSec",
+          "shotType",
+          "visual",
+          "productShot",
+          "cameraMovement",
+          "voiceover",
+          "bgm"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "description": "分镜序号,从 0 开始"
+          },
+          "durationSec": {
+            "type": "number",
+            "description": "本镜时长(秒)"
+          },
+          "shotType": {
+            "type": "string",
+            "description": "景别,如 特写/中景/全景"
+          },
+          "visual": {
+            "type": "string",
+            "description": "画面内容详述,具体到可直接作视频生成提示词;展示产品时须含 @<产品图片URL>"
+          },
+          "productShot": {
+            "type": "boolean",
+            "description": "本镜是否展示产品主体;true 时 visual 必须含 @<产品图片URL>"
+          },
+          "cameraMovement": {
+            "type": "string",
+            "description": "运镜,如 推/拉/摇/固定"
+          },
+          "voiceover": {
+            "type": "string",
+            "description": "旁白/台词(用目标语种撰写),无则空字符串"
+          },
+          "bgm": {
+            "type": "string",
+            "description": "音乐/音效提示"
+          }
+        }
+      },
+      "description": "分镜列表,各镜时长之和应等于 durationSec"
+    },
+    "cta": {
+      "type": "string",
+      "description": "结尾引导/转化动作"
+    },
+    "taglines": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "2-4 个候选 slogan"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "zh",
+        "en",
+        "id",
+        "th",
+        "vi",
+        "ja",
+        "ko",
+        "ms"
+      ],
+      "description": "运行时回填的语种 id"
+    }
+  }
+}

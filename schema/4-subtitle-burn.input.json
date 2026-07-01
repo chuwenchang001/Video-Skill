@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "VIDEO_GENERATION"
+  ],
+  "properties": {
+    "VIDEO_GENERATION": {
+      "type": "object",
+      "description": "Skill3 输出(从中取成片 URL:优先 stitched.url,否则 segments[0].url)"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "zh",
+        "en",
+        "id",
+        "th",
+        "vi",
+        "ja",
+        "ko",
+        "ms"
+      ],
+      "default": "zh",
+      "description": "成片台词/配音语种 id"
+    }
+  }
+}

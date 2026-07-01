@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "required": [
+    "model",
+    "ratio",
+    "resolution",
+    "totalDurationSec",
+    "segments"
+  ],
+  "properties": {
+    "model": {
+      "type": "string",
+      "description": "实际使用的视频模型(BYOM 时为账号自带)"
+    },
+    "byom": {
+      "type": "boolean",
+      "description": "是否使用账号自带模型"
+    },
+    "ratio": {
+      "type": "string"
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "totalDurationSec": {
+      "type": "number"
+    },
+    "billedSeconds": {
+      "type": "number"
+    },
+    "billedTokens": {
+      "type": "number",
+      "description": "火山方舟回带 token 用量,无则 0"
+    },
+    "segmentCount": {
+      "type": "integer"
+    },
+    "extended": {
+      "type": "boolean",
+      "description": "是否用了 extension 续写"
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer"
+          },
+          "taskId": {
+            "type": "string"
+          },
+          "durationSec": {
+            "type": "number"
+          },
+          "productRefs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "persisted": {
+            "type": "boolean"
+          },
+          "tosKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceUrl": {
+            "type": "string",
+            "description": "Ark 原始临时 URL"
+          },
+          "url": {
+            "type": "string",
+            "description": "持久化后 URL(未配 TOS 则回退临时 URL)"
+          }
+        }
+      }
+    },
+    "stitched": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "拼接结果(单段时为 null;失败时含 error 字段)"
+    }
+  }
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "tiktok",
+    "label": "TikTok",
+    "durationHint": "15–34s 为主,竖屏,trend 驱动",
+    "audience": "全球年轻用户,娱乐优先,梗与音乐文化强",
+    "algoPreference": "前 2 秒 hook + 完播 + 二创,trending sound/挑战助推",
+    "contentNorms": [
+      "强娱乐性、节奏与卡点",
+      "贴合 trend/meme/BGM",
+      "视觉冲击与反转"
+    ],
+    "constraints": [
+      "说教/慢节奏即划走",
+      "需本地化,避免直接照搬国内表达"
+    ]
+  },
+  {
+    "id": "instagram",
+    "label": "Instagram",
+    "durationHint": "Reels 15–90s 竖屏为主;Feed 视频可方可竖,审美优先",
+    "audience": "海外年轻女性/生活方式人群,品牌审美敏感",
+    "algoPreference": "审美与互动 + Explore/Reels 分发,品牌调性一致性重要",
+    "contentNorms": [
+      "视觉美学/质感、调色统一",
+      "时尚/生活方式叙事",
+      "aesthetic、aspirational"
+    ],
+    "constraints": [
+      "廉价感/粗糙画面掉价",
+      "品牌调性不一致会损伤形象"
+    ]
+  },
+  {
+    "id": "facebook",
+    "label": "Facebook",
+    "durationHint": "15–60s,竖屏/方屏均可,信息流场景",
+    "audience": "海外全年龄、家庭与大众消费,直响人群",
+    "algoPreference": "直响转化 + 社会证明,前 3 秒留住信息流用户,落地页/商品转化",
+    "contentNorms": [
+      "利益点直给、benefit-driven",
+      "高可读字幕 + 社会证明",
+      "家庭安全、普适表达"
+    ],
+    "constraints": [
+      "夸张前后对比/敏感属性定向受政策限制",
+      "硬广疲劳需多创意轮换"
+    ]
+  },
+  {
+    "id": "shopee",
+    "label": "Shopee",
+    "durationHint": "9–60s 竖屏,商品视频/直播切片为主",
+    "audience": "东南亚价格敏感、促销驱动的电商买家",
+    "algoPreference": "商品页与 Feed 推荐,促销/优惠券/转化导向,挂车直接成交",
+    "contentNorms": [
+      "卖点 + 价格 + 优惠直给",
+      "明亮高饱和、促销氛围",
+      "真实使用与开箱"
+    ],
+    "constraints": [
+      "弱化品牌叙事、强化即时利益",
+      "需本地化语言与大促节点(9.9/11.11)"
+    ]
+  },
+  {
+    "id": "lazada",
+    "label": "Lazada",
+    "durationHint": "9–60s 竖屏,商品视频与活动切片",
+    "audience": "东南亚电商买家,促销与品质并重",
+    "algoPreference": "商品推荐 + 大促分发,优惠券/LazMall 信任背书驱动转化",
+    "contentNorms": [
+      "卖点与优惠清晰",
+      "明亮促销视觉",
+      "品质/正品背书"
+    ],
+    "constraints": [
+      "以转化为先、叙事从简",
+      "需贴合大促节奏与本地化"
+    ]
+  },
+  {
+    "id": "youtube",
+    "label": "YouTube",
+    "durationHint": "Shorts 15–60s 竖屏;长视频 1–10min 横屏,信息密度高",
+    "audience": "全球,教育/测评/how-to 接受度高",
+    "algoPreference": "前几秒留存 + 信息价值,Shorts 助推 + 长视频导流频道",
+    "contentNorms": [
+      "清晰的价值主张/教学感",
+      "测评、对比、how-to 友好",
+      "结构化、有结论"
+    ],
+    "constraints": [
+      "纯情绪化内容转化弱",
+      "需有'学到东西'的获得感"
+    ]
+  },
+  {
+    "id": "amazon",
+    "label": "Amazon",
+    "durationHint": "15–30s,横/方屏,商品详情页与 Sponsored Brands 视频",
+    "audience": "高购买意图、理性比价的购物者",
+    "algoPreference": "商品页转化与关键词广告,功能/规格清晰、合规优先",
+    "contentNorms": [
+      "功能/规格清晰演示",
+      "解决真实使用问题",
+      "干净、专业、信息密度高"
+    ],
+    "constraints": [
+      "禁夸大与未证实宣称(平台审核严)",
+      "避免站外促销倒计时类紧迫话术"
+    ]
+  },
+  {
+    "id": "douyin",
+    "label": "抖音",
+    "durationHint": "15–60s,竖屏 9:16,黄金前 3 秒决定完播",
+    "audience": "全年龄但偏年轻,兴趣电商,冲动消费强",
+    "algoPreference": "完播率 + 互动 + 转化,强推荐分发,挂车直接成交",
+    "contentNorms": [
+      "前 3 秒强 hook(痛点/反差/利益点)",
+      "节奏快、信息密度高",
+      "口语化、有钩子的口播或字幕"
+    ],
+    "constraints": [
+      "慢热铺垫会掉完播",
+      "避免硬广感,需原生内容化"
+    ]
+  },
+  {
+    "id": "kuaishou",
+    "label": "快手",
+    "durationHint": "15–60s 为主,可略长,竖屏",
+    "audience": "下沉市场为主,信任'老铁'人设,复购粘性强",
+    "algoPreference": "关注/私域 + 普惠分发,主播信任驱动成交",
+    "contentNorms": [
+      "真实、接地气、强人设",
+      "直给利益与实在好处",
+      "去精致化,生活感"
+    ],
+    "constraints": [
+      "过度精致/广告腔会失真",
+      "信任未建立时硬转化效果差"
+    ]
+  },
+  {
+    "id": "shipinhao",
+    "label": "视频号",
+    "durationHint": "30–90s,竖屏,可承接稍长叙事",
+    "audience": "偏 30+,微信生态,社交关系链分享",
+    "algoPreference": "社交推荐(点赞=朋友可见)+ 公私域结合,信任背书重要",
+    "contentNorms": [
+      "有价值感/情感共鸣易被转发",
+      "品牌信任与口碑导向",
+      "适度正式、有调性"
+    ],
+    "constraints": [
+      "纯叫卖难破圈",
+      "依赖社交裂变,需有'值得转发'的点"
+    ]
+  },
+  {
+    "id": "xiaohongshu",
+    "label": "小红书",
+    "durationHint": "30s–3min,可竖可方,搜索流量重要",
+    "audience": "女性为主、一二线、追求精致生活与攻略",
+    "algoPreference": "搜索 + 标签关键词 + 收藏,'真实测评/个人经验'最吃香",
+    "contentNorms": [
+      "第一人称真实体验、笔记感",
+      "干货/对比/避雷有说服力",
+      "审美在线、画面精致"
+    ],
+    "constraints": [
+      "明显恰饭/夸大会被反感",
+      "需埋搜索关键词与使用场景"
+    ]
+  }
+]

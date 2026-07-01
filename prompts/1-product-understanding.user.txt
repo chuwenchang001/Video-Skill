@@ -1,0 +1,30 @@
+请为以下商品产出「自动归类 + 商品理解 + 平台/视频类型策略 + 创意方向决策」。
+{{#if productImageUrl}}
+== 产品图片 ==
+已随附产品图片(见图)。请结合图片中产品的真实外观/形态/材质来刻画卖点与创意方向,确保后续视频能忠实还原该产品。
+{{/if}}
+
+== 内置类目体系(必须把商品归入其一)==
+{{categories_rendered}}
+
+== 本次投放平台知识 ==
+{{platform_kb_rendered}}
+
+== 本次视频类型知识(用户已指定,不可更换形态)==
+{{video_type_kb_rendered}}
+
+== 参考范例(学习其归类/打分/决策的思路,不要照抄内容)==
+{{few_shot_rendered}}
+
+== 本次商品信息 ==
+{{product_info_json}}
+
+要求:
+1. 先把商品自动归入上面的内置类目(给 categoryId/label/置信度/依据)。
+2. 概括商品、刻画 2–4 类目标人群、提炼 3–6 个核心卖点与所解决痛点。
+3. 给出平台策略(应用的内容惯例 + 开场钩子)与视频类型执行要点。
+4. 产出 2–4 个候选创意方向,每个按五维量表打分并算 totalScore,按分从高到低排序。
+5. 选出唯一最优方向写入 recommendedDirection,whyBest 必须引用决策规则与量表依据。
+6. platformStrategy.platform 回显 "{{platform}}",videoTypeStrategy.videoType 回显 "{{videoType}}"。
+
+只返回一个 JSON 对象,字段结构严格匹配约定的 Output Schema。

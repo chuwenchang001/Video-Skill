@@ -1,0 +1,202 @@
+[
+  {
+    "title": "美妆个护 × 抖音 × 口播种草",
+    "input": {
+      "product": "氨基酸温和洁面慕斯",
+      "features": [
+        "氨基酸表活",
+        "一泵出绵密泡",
+        "敏感肌可用",
+        "不紧绷"
+      ],
+      "price": "79 元",
+      "scenario": "早晚洁面 / 敏感肌换季",
+      "platform": "douyin",
+      "videoType": "spoken_grass"
+    },
+    "output": {
+      "classification": {
+        "categoryId": "beauty_personal_care",
+        "categoryLabel": "美妆个护",
+        "confidence": 0.95,
+        "reasoning": "洁面清洁类护肤品,典型美妆个护品类"
+      },
+      "productSummary": "一款氨基酸温和起泡的敏感肌洁面慕斯,洗后不紧绷。",
+      "targetAudience": [
+        "换季泛红的敏感肌女生",
+        "追求温和清洁的护肤新手",
+        "用惯皂基想换温和款的人群"
+      ],
+      "sellingPoints": [
+        "氨基酸表活温和不刺激",
+        "一泵即出绵密泡省事",
+        "敏感肌可用",
+        "洗后不紧绷"
+      ],
+      "painPointsSolved": [
+        "皂基洗后紧绷拔干",
+        "敏感肌怕刺激不敢换",
+        "打泡麻烦"
+      ],
+      "platformStrategy": {
+        "platform": "douyin",
+        "appliedNorms": [
+          "前3秒抛紧绷痛点做hook",
+          "口语化快节奏",
+          "结尾直给利益点+引导"
+        ],
+        "hookGuidance": "开场用'洗完脸像被拔干?'痛点反问,1秒内出绵密泡特写制造爽点。"
+      },
+      "videoTypeStrategy": {
+        "videoType": "spoken_grass",
+        "formatNotes": [
+          "真人出镜口播+上脸泡沫特写",
+          "卖点逐条直给",
+          "15-30秒内完成种草闭环"
+        ]
+      },
+      "creativeDirections": [
+        {
+          "title": "拔干警告:换季敏感肌的温和救场",
+          "angle": "以'紧绷拔干'痛点切入,现场上脸演示绵密泡与洗后不紧绷的即时反差。",
+          "rationale": "抖音前3秒痛点hook+可视化泡沫,契合口播种草快转化;敏感肌人群共鸣强。",
+          "scores": {
+            "platformFit": 5,
+            "audienceResonance": 5,
+            "productFit": 5,
+            "feasibility": 5,
+            "differentiation": 3
+          },
+          "totalScore": 23,
+          "recommended": true
+        },
+        {
+          "title": "一泵挑战:5秒打出绵密泡",
+          "angle": "以'一泵出泡'的省事爽点做视觉挑战,弱化痛点、强化便捷与质感。",
+          "rationale": "可执行且有记忆点,但卖点偏单一,人群共鸣略弱于痛点切入。",
+          "scores": {
+            "platformFit": 4,
+            "audienceResonance": 3,
+            "productFit": 4,
+            "feasibility": 5,
+            "differentiation": 4
+          },
+          "totalScore": 20,
+          "recommended": false
+        }
+      ],
+      "recommendedDirection": {
+        "title": "拔干警告:换季敏感肌的温和救场",
+        "angle": "痛点反问开场 + 上脸演示绵密泡与洗后不紧绷的即时反差。",
+        "whyBest": "依规则1抖音需前3秒强hook,该方向痛点hook最强;依规则2美妆个护契合口播种草;五维总分最高(23)。注意规则5:不得宣称'修复/治疗'敏感肌,仅表达温和不刺激。",
+        "executionHints": [
+          "0-3s痛点反问+泡沫特写",
+          "中段口播3条卖点",
+          "结尾价格+引导",
+          "避免医疗化功效词"
+        ],
+        "expectedTotalScore": 23
+      }
+    }
+  },
+  {
+    "title": "家居家电 × 小红书 × 对比实验",
+    "input": {
+      "product": "无线手持除螨仪",
+      "features": [
+        "UV杀菌",
+        "拍打吸尘",
+        "无线续航40分钟",
+        "可水洗滤网"
+      ],
+      "price": "399 元",
+      "scenario": "床品 / 沙发 / 母婴除螨",
+      "platform": "xiaohongshu",
+      "videoType": "comparison_experiment"
+    },
+    "output": {
+      "classification": {
+        "categoryId": "home_appliance",
+        "categoryLabel": "家居家电",
+        "confidence": 0.9,
+        "reasoning": "家用清洁电器,属家居家电品类"
+      },
+      "productSummary": "一台带UV杀菌与拍打吸尘的无线除螨仪,主打床品深度除螨。",
+      "targetAudience": [
+        "有娃的精致妈妈",
+        "鼻敏感/怕螨虫的租房女生",
+        "注重居家清洁的一二线用户"
+      ],
+      "sellingPoints": [
+        "UV杀菌+拍打吸尘双效",
+        "无线40分钟随手清",
+        "滤网可水洗",
+        "母婴床品适用"
+      ],
+      "painPointsSolved": [
+        "看不见的螨虫焦虑",
+        "传统吸尘器吸不深",
+        "清洁麻烦不想做"
+      ],
+      "platformStrategy": {
+        "platform": "xiaohongshu",
+        "appliedNorms": [
+          "第一人称真实测评口吻",
+          "前后对比+滤网脏污可视化",
+          "埋'除螨仪推荐/敏感肌'关键词"
+        ],
+        "hookGuidance": "封面用滤网脏污对比图,开场以'用完倒出这盆灰我惊了'真实体验切入。"
+      },
+      "videoTypeStrategy": {
+        "videoType": "comparison_experiment",
+        "formatNotes": [
+          "同一张床清洁前后对比",
+          "白布/滤网吸出物可视化",
+          "对比需公平真实不夸张"
+        ]
+      },
+      "creativeDirections": [
+        {
+          "title": "倒出这盆灰:床到底有多脏",
+          "angle": "用除螨前后白布与滤网脏污的强对比,把'看不见的螨虫'变成眼见为实。",
+          "rationale": "小红书吃真实测评,对比实验把功能可视化最具说服力;脏污反差是强记忆点。",
+          "scores": {
+            "platformFit": 5,
+            "audienceResonance": 5,
+            "productFit": 5,
+            "feasibility": 4,
+            "differentiation": 4
+          },
+          "totalScore": 23,
+          "recommended": true
+        },
+        {
+          "title": "母婴床品除螨实测",
+          "angle": "聚焦有娃家庭场景,实测婴儿床前后,叠加UV杀菌卖点。",
+          "rationale": "人群精准但场景较窄,差异化一般;对比仍可信。",
+          "scores": {
+            "platformFit": 4,
+            "audienceResonance": 4,
+            "productFit": 4,
+            "feasibility": 4,
+            "differentiation": 3
+          },
+          "totalScore": 19,
+          "recommended": false
+        }
+      ],
+      "recommendedDirection": {
+        "title": "倒出这盆灰:床到底有多脏",
+        "angle": "除螨前后白布与滤网脏污强对比,把不可见变可见。",
+        "whyBest": "依规则1小红书重真实测评、规则2功能可量化品类优先对比实验,该方向二者皆满足且总分最高(23)。依规则5:杀菌对比需公平真实,不宣称医疗/健康疗效。",
+        "executionHints": [
+          "封面=脏污对比图",
+          "全程真实第一人称",
+          "埋除螨仪/敏感肌关键词",
+          "对比条件保持一致"
+        ],
+        "expectedTotalScore": 23
+      }
+    }
+  }
+]

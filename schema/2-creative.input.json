@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "description": "Skill 的真实输入来自 run.input + 上游 PRODUCT_UNDERSTANDING 输出。",
+  "required": [
+    "PRODUCT_UNDERSTANDING"
+  ],
+  "properties": {
+    "PRODUCT_UNDERSTANDING": {
+      "type": "object",
+      "description": "Skill1 完整输出对象"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "tiktok",
+        "instagram",
+        "facebook",
+        "shopee",
+        "lazada",
+        "youtube",
+        "amazon",
+        "douyin",
+        "kuaishou",
+        "shipinhao",
+        "xiaohongshu"
+      ],
+      "default": "douyin",
+      "description": "投放平台 id"
+    },
+    "videoType": {
+      "type": "string",
+      "enum": [
+        "spoken_grass",
+        "narrative_short",
+        "funny_drama",
+        "product_review",
+        "unboxing",
+        "comparison_experiment",
+        "kol_recommend"
+      ],
+      "default": "spoken_grass",
+      "description": "视频类型 id"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "zh",
+        "en",
+        "id",
+        "th",
+        "vi",
+        "ja",
+        "ko",
+        "ms"
+      ],
+      "default": "zh",
+      "description": "成片台词/配音语种 id"
+    },
+    "duration": {
+      "type": "number",
+      "enum": [
+        15,
+        30
+      ],
+      "default": 15,
+      "description": "视频总时长(秒),仅 15 或 30"
+    },
+    "productImageUrl": {
+      "type": "string",
+      "description": "产品图片公网 URL(可选,用于多模态理解与产品一致性)"
+    }
+  }
+}
